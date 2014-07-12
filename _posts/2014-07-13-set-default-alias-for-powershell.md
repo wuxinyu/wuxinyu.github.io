@@ -23,3 +23,21 @@ tags : []
     new-item alias:st -value "C:\Tools\Sublime Text 2\sublime_text.exe" | Out-Null
 
 重启powershell即可.
+
+###profile.ps1简单例子
+	$gitroot = "E:\git-repo"
+	$blog = Join-Path $gitroot "wuxinyu.github.io"
+	function XYCdBlog
+	{
+		Set-Location $blog
+	}
+
+	function XYRunBlog
+	{
+		Set-Location $blog
+		jekyll serve --watch
+	}
+
+	set-alias cd-blog XYCdBlog
+	set-alias run-blog XYRunBlog
+	new-item alias:st -value "C:\Tools\Sublime Text 2\sublime_text.exe" | Out-Null
