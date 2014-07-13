@@ -5,15 +5,19 @@ tagline:
 ---
 {% include JB/setup %}
 
+<ul class="media-list">
 {% for post in site.posts limit:3 %}
-<div class="page-header">
-  <h1>{{ post.title }} {% if post.tagline %} <small>{{ post.tagline }}</small>{% endif %}
-  <span class="pull-right">{{ post.date | date_to_string }}</span></h1>
-</div>
 
-<div class="row">
-  <div class="col-xs-12">
-    {{ post.content }}
-  </div>
-</div>
+  <li class="media">
+    <a class="pull-left" href="{{post.url}}">
+      {{post.index}}
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">{{post.title}}</h4>
+      <p>{{ post.content }}</p>
+      <p>post at {{ post.date | date_to_string }}</p>
+    </div>
+  </li>
  {% endfor %}
+ 
+</ul>
