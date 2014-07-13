@@ -11,34 +11,40 @@
       {{ content }}
     </div>
 
-  {% unless page.categories == empty %}
-    <ul class="tag_box inline">
-      <li><i class="glyphicon-open"></i></li>
-      {% assign categories_list = page.categories %}
-      {% include JB/categories_list %}
-    </ul>
-  {% endunless %}  
+     {% unless page.categories == empty %} 分类:
+     <ul class="nav nav-pills" role="tablist" style="margin-bottom:5px;">{% for category in page.categories%}
+      <li class='active' style="font-size:12px;">
+        <a style="padding:2px 5px;" href="{{ BASE_PATH }}{{ site.JB.categories_path }}#{{ category }}-ref">
+          {{category}}
+        </a>
+      </li>
+    {% endfor %}</ul>
+    {% endunless %}
+
+
 
   {% unless page.tags == empty %}
-    <ul class="tag_box inline">
-      <li><i class="glyphicon-tags"></i></li>
-      {% assign tags_list = page.tags %}
-      {% include JB/tags_list %}
-    </ul>
-  {% endunless %}  
+ Tags:
+  <ul class="nav nav-pills" role="tablist">{% for tag in page.tags%}
+      <li class='active' style="font-size:12px;">
+        <a style="padding:2px 5px;" href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">
+          {{tag}}
+        </a>
+      </li>
+    {% endfor %}</ul>{% endunless %}
   
     <hr>
     <ul class="pagination">
     {% if page.previous %}
-      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; Previous</a></li>
+      <li class="prev"><a href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">&laquo; </a></li>
     {% else %}
-      <li class="prev disabled"><a>&larr; Previous</a></li>
+      <li class="prev disabled"><a>&larr; </a></li>
     {% endif %}
-      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a></li>
+      <li><a href="{{ BASE_PATH }}{{ site.JB.archive_path }}">归档</a></li>
     {% if page.next %}
-      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next &raquo;</a></li>
+      <li class="next"><a href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">&raquo;</a></li>
     {% else %}
-      <li class="next disabled"><a>Next &rarr;</a>
+      <li class="next disabled"><a>&rarr;</a>
     {% endif %}
     </ul>
     <hr>

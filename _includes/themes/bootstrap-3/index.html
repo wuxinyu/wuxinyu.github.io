@@ -1,5 +1,35 @@
 <div class="row">
-  <div class="col-xs-12">
-    {{ content }}
+  <div class="col-xs-9">
+    <ul class="media-list">
+{% for post in site.posts limit:10 %}
+  <li class="media well">
+    <span class="pull-left">
+    </span>
+    <div class="media-body">
+      <h4 class="media-heading"><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h4>
+      <p style="min-height:30px;">
+      	{{ post.tagline }}
+      <p>
+      <p>{% unless post.tags == empty %}<ul class="nav nav-pills" role="tablist">{% for tag in post.tags%}
+		  <li class='active' style="font-size:12px;">
+		    <a style="padding:2px 5px;" href="{{ BASE_PATH }}{{ site.JB.tags_path }}#{{ tag }}-ref">
+		      {{tag}}
+		    </a>
+		  </li>
+	  {% endfor %}<span class="pull-right">posted @ {{ post.date | date_to_long_string }}</span></ul>{% endunless %}</p>
+    </div>
+  </li>
+ {% endfor %}
+</ul>
+  </div>
+  <div class="col-xs-3">
+    <div class="panel panel-default">
+	  <div class="panel-heading">分类</div>
+	  <div class="panel-body">
+	    {% for category in site.categories %}
+		  	<a href="categories.html#{{ category[0] }}-ref">{{ category[0] | join: "/" }} <span class="badge pull-right">{{category[1].size}}</span></a>
+		{% endfor %}
+	  </div>
+	</div>
   </div>
 </div>

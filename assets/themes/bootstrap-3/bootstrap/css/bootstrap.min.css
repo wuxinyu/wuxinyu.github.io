@@ -6130,6 +6130,9 @@ a {
   left: -20px;
   top: 15px;
 }
+p{
+  margin-bottom: 0px;
+}
 .hp ul li .fa {
   color: #eeeeee;
 }

@@ -2,8 +2,8 @@
 title: 在powershell设置默认工具应用程序别名
 layout: post
 category : powershell
-tagline: 
-tags : []
+tagline: 在powershell设置默认工具应用程序别名
+tags : [powershell]
 ---
 ###相关命令
 修改执行策略
