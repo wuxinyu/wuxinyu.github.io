@@ -27,7 +27,7 @@
 	  <div class="panel-heading">分类</div>
 	  <div class="panel-body">
 	    {% for category in site.categories %}
-		  	<a href="categories.html#{{ category[0] }}-ref">{{ category[0] | join: "/" }} <span class="badge pull-right">{{category[1].size}}</span></a>
+		  	<a href="categories.html#{{ category[0] }}-ref">{{ category[0] | join: "/" }} <span class="badge pull-right">{{category[1].size}}</span></a></br>
 		{% endfor %}
 	  </div>
 	</div>
