@@ -5,7 +5,7 @@ category : automatic
 tagline: sed
 tags : [linux,shell]
 ---
-
+ 
 ###sed
 sed是一个非交互性文本流编辑器。sed一次处理一行内容。处理时，把当前处理的行存储在临时缓冲区中，称为“模式空间”，接着用sed命令处理缓冲区中的内容，处理完成后，把缓冲区的内容送往屏幕。
 

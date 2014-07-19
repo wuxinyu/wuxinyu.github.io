@@ -6,7 +6,7 @@ tagline: awk
 tags : [linux,shell]
 ---
 
-###awk
+###awk 
 
 awk 是一种编程语言，用于在linux/unix下对文本和数据进行处理。数据可以来自标准输入、一个或多个文件，或其它命令的输出。它支持用户自定义函数和动态正则表达式等先进功能，是linux/unix下的一个强大编程工具。
 

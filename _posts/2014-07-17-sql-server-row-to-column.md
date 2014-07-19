@@ -7,4 +7,4 @@ tags : [db,sqlserver]
 ---
 ###相关SQL
 	select stuff((select ',' + joinColumn from subTable sub where sub.pk = master.id for xml path('')),1,1,'') joinedColumn
-	from masterTable master
+	from masterTable master 

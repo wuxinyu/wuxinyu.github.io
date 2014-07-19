@@ -6,7 +6,7 @@ tagline: 在powershell设置默认工具应用程序别名
 tags : [powershell]
 ---
 ###相关命令
-修改执行策略
+修改执行策略 
 
 	set-executionpolicy remotesigned
 

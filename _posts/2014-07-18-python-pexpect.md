@@ -5,7 +5,7 @@ category : automatic
 tagline: ssh,ftp,passwd,telnet,etc命令行程序的自动交互
 tags : [linux,python,shell]
 ---
-###安装
+###安装 
 	$git clone https://github.com/pexpect/pexpect.git
 	$cd pexpect
 	$python ./setup.py install

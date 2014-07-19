@@ -6,7 +6,7 @@ tagline: awk sed grep
 tags : [linux,shell]
 ---
 
-###grep
+###grep 
 
 ####grep使用正则表达式搜索文本，并把匹配的行打印出来。 一般格式 grep [选项] 基本正则式 [文件]
 

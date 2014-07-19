@@ -8,7 +8,7 @@ tags : [linux,python,shell]
 
 摘自：http://www.2cto.com/kf/201009/74896.html
 
-###os相关
+###os相关 
 	os.chdir(dirname)                             #变更当前目录
 	os.listdir(dirname)                           #遍历当前目录
 	os.system                                     #命令执行 无返回

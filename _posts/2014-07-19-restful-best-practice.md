@@ -4,7 +4,7 @@ layout: post
 category : dev
 tagline: restful 架构策略
 tags : [web]
----
+--- 
 
 ###RESTful API 设计指南
 摘自:http://www.ruanyifeng.com/blog/2014/05/restful_api.html
