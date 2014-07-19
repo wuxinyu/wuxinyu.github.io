@@ -1,7 +1,7 @@
 ---
 title: 在powershell设置默认工具应用程序别名
 layout: post
-category : powershell
+category : automatic
 tagline: 在powershell设置默认工具应用程序别名
 tags : [powershell]
 ---

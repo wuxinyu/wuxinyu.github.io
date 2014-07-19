@@ -1,7 +1,7 @@
 ---
 title: SqlServer 2008 行转列
 layout: post
-category : sqlserver
+category : dev
 tagline: t-sql 中行转列
 tags : [sqlserver]
 ---
