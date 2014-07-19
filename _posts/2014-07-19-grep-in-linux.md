@@ -5,16 +5,16 @@ category : automatic
 tagline: awk sed grep
 tags : [linux,shell]
 ---
+grep 
 
-###grep 
+grep使用正则表达式搜索文本，并把匹配的行打印出来。 一般格式 grep [选项] 基本正则式 [文件]
 
-####grep使用正则表达式搜索文本，并把匹配的行打印出来。 一般格式 grep [选项] 基本正则式 [文件]
-
-####选项：
+###选项：
 
 -c 不输出内容只统计匹配行数 
 
 	grep -c "123" filename      相当于 grep "123" filename | wc -l
+
 -i 不区分大小写
 
 	grep -i "ok" filename       匹配包含ok,Ok,oK,OK的所有行
@@ -33,7 +33,7 @@ tags : [linux,shell]
 
 	grep -2 "123" filename       同时显示匹配行的上下2行。
     
-####正则：
+###正则：
 
 ^ 锚定行的开始如:
 
@@ -77,7 +77,7 @@ $ 锚定行的结束如:
 
     '\bgrep\b'                     只匹配grep。
 
-####特殊事项：
+###特殊事项：
 
 1.引号的使用
 
