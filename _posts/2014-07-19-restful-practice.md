@@ -6,7 +6,6 @@ tagline: restful 架构策略
 tags : [web]
 ---
 
-<div class="content">
       <h3 id="restful-api-">RESTful API 设计指南</h3>
 <p>摘自:http://www.ruanyifeng.com/blog/2014/05/restful_api.html</p>
 
@@ -197,4 +196,3 @@ Erlang:
 
 </code></pre>
 
-    </div>
