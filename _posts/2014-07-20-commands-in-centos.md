@@ -29,3 +29,30 @@ ssh无密码登陆
 查询网关
 
 	route -n
+
+修改机器名
+	
+	/etc/sysconfig/network
+	/etc/hosts
+	hostname your-hostname
+
+安装scp host wget等命令
+
+	yum install openssh-clients ind-utils wget
+
+关闭Selinux
+
+	1      vi /etc/selinux/config
+	2      #SELINUX=enforcing     #注释掉
+	3      #SELINUXTYPE=targeted  #注释掉
+	4      SELINUX=disabled  #增加
+	5      :wq  #保存，关闭。
+	6      shutdown -r now   #重启系统
+
+查看SELinux的状态：
+
+	getenforce
+
+监听日志变化
+	
+	tail -f
