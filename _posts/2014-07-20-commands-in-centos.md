@@ -56,3 +56,16 @@ ssh无密码登陆
 监听日志变化
 	
 	tail -f
+
+基于ssh自动部署
+	#!/bin/sh
+	 
+	hosts=`cat ~/host.txt`
+	 
+	for x in $hosts
+	do
+	        echo "===== $x ====="
+	        ssh $x "mkdir -p /home/baoniu/hadoop_data/local; mkdir -p /home/baoniu/hadoop_data/logs"
+	        scp -r ~/hadoop-0.23.1/  $x:~/
+	done
+
