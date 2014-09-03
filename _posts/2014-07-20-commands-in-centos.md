@@ -58,8 +58,9 @@ ssh无密码登陆
 	tail -f
 
 基于ssh自动部署
+
 	#!/bin/sh
-	 
+	
 	hosts=`cat ~/host.txt`
 	 
 	for x in $hosts
