@@ -70,3 +70,18 @@ ssh无密码登陆
 	        scp -r ~/hadoop-0.23.1/  $x:~/
 	done
 
+storm依赖
+
+	git clone https://github.com/nathanmarz/jzmq.git
+	cd jzmq
+	./autogen.sh
+	./configure
+	make
+	sudo make install
+
+storm submitter
+
+	remote: storm jar storm-starter.jar storm.starter.RollingTopWords production-topology remote
+	local:  storm jar storm-starter.jar storm.starter.RollingTopWords
+
+如通过copy部署supervisor后 需清空strom.local.dir内容后再启动supervisor
