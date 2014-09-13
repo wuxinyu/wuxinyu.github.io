@@ -85,3 +85,27 @@ storm submitter
 	local:  storm jar storm-starter.jar storm.starter.RollingTopWords
 
 如通过copy部署supervisor后 需清空strom.local.dir内容后再启动supervisor
+
+hadoop 2.5
+
+	yum -y install  lzo-devel  zlib-devel  gcc autoconf automake libtool gcc-c++  openssl-devel ncurses-devel cmake
+
+	Protobuf、Ant、maven、findbugs jdk1.7
+
+echo “export JAVA_HOME=/usr/java/jdk1.7.0_40/” >> /etc/profile
+
+服务器端启动
+
+usr/bin/rsync --daemon --config=/etc/rsyncd/rsyncd.conf
+可能需要root权限运行.
+/etc/rsyncd/rsyncd.conf 是你刚才编辑的rsyncd.conf的位置.
+也可以在/etc/rc.d/rc.local里加入让系统自动启动等.
+客户端同步
+
+rsync -参数 用户名@同步服务器的IP::rsyncd.conf中那个方括号里的内容 本地存放路径 如:
+rsync -avzP nemo@192.168.10.1::nemo /backup
+说明：
+-a 参数，相当于-rlptgoD，-r 是递归 -l 是链接文件，意思是拷贝链接文件；-p 表示保持文件原有权限；-t 保持文件原有时间；-g 保持文件原有用户组；-o 保持文件原有属主；-D 相当于块设备文件；
+-z 传输时压缩；
+-P 传输进度；
+-v 传输时的进度等信息
