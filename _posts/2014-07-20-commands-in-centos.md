@@ -10,6 +10,7 @@ Development Tools安装
 
 	yum groupinstall "Development Libraries"
 	yum groupinstall "Development Tools"
+	yum -y install python-devel
 	yum install ncurses-devel zlib-devel texinfo gtk+-devel gtk2-devel qt-devel tcl-devel tk-devel libX11-devel kernel-headers kernel-devel
 
 ssh无密码登陆

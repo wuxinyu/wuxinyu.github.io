@@ -9,7 +9,7 @@ tags : [powershell]
 修改执行策略 
 
 	set-executionpolicy remotesigned
-
+ 
 检查配置文件
 
 	test-path $profile
