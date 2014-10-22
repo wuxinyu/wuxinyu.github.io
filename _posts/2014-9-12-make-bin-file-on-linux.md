@@ -3,7 +3,7 @@ title: make bin file on linux
 layout: post
 category : automatic
 tagline: centos
-tags : [linux]
+tags : [linux] 
 ---
 bin的制作
 <p>
